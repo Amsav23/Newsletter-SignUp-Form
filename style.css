@@ -21,11 +21,16 @@ html, body {
     height: 100vh;
 }
 
+.hidden {
+    display: none;
+}
+
 
 .attribution {
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
 }
+
 .attribution a {
     color: var(--attribution);
 }
