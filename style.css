@@ -107,11 +107,11 @@ button {
     background-color: var(--DarkSlateGrey);
     color: var(--White);
     border: none;
-    transition-duration: 0.25s;
+    transition: background 1.3s ease, color 0.5s ease; /* For smooth transition */
 }
 
 button:hover {
-    background-color: var(--Tomato);
+    background: linear-gradient(to right, #ff0080, var(--Tomato));
     cursor: pointer;
 }
 /* End Card Container styling */
