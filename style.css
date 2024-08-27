@@ -107,11 +107,17 @@ button {
     background-color: var(--DarkSlateGrey);
     color: var(--White);
     border: none;
+    transition-duration: 0.25s;
+}
+
+button:hover {
+    background-color: var(--Tomato);
+    cursor: pointer;
 }
 /* End Card Container styling */
 
 
-/* Success msg styling */
+/* Success Message styling */
 .success-msg-container {
     padding: 7vh;
     width: 33%;
@@ -128,10 +134,26 @@ button {
     line-height: 1;
 }
 
+/* Error Message styling */
+.error-container {
+    display: flex;
+    justify-content: space-between;
+}
 
+.error-msg {
+    color: red;
+    display: none;
+}
+
+.error-msg:not(.hidden) {
+    display: block;
+}
+
+/* Hidden class */
 .hidden {
     display: none;
 }
+
 
 /* Attribute styling */
 .attribution {
