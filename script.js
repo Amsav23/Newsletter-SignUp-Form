@@ -57,6 +57,7 @@ function validateEmail(email) { // This determines whether the provided email st
     // `true` if the email is valid according to the pattern and ``false` if it is not.
 }
 
+// I need a function to dismiss the success message and reset the email form
 function dismissMessage() {
     // Get the elements
     const successMessage = document.getElementById("success-message");
@@ -68,10 +69,13 @@ function dismissMessage() {
     // Show the card container
     cardContainer.classList.remove("hidden");
 
-    // Reset the form if needed
+    // Reset the form if needed/after the user dismisses the success message
     document.getElementById("subscribe-form").reset();
-    console.log("Dismissed")
-}
+    console.log("Dismissed");
+};
 
 // Attach the dismiss function to the button click event
+// The event listener listens for a "click" event, and when the button is clicked, it triggers the `dismissMessage` function.
 document.getElementById("dismiss-btn").addEventListener("click", dismissMessage);
+// When the user clicks the "dismiss" button, the success message will be hidden,  
+// the form will be reset, and the `cardContainer` will be shown again.
