@@ -19,7 +19,7 @@ body {
     background-color: var(--DarkSlateGrey);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -38,7 +38,6 @@ label, button {
 .card-container, .success-msg-container {
     background-color: var(--White);
     border-radius: 30px;
-    margin: 50px 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -55,10 +54,6 @@ label, button {
     justify-content: center;
     padding-left: 40px;
     width: 50%;
-}
-
-.email-container {
-    margin: 25px 0;
 }
 
 .text-container h1 {
@@ -85,12 +80,15 @@ label, button {
 .list-container ul {
     list-style-type: none;
 }
+/* End List Styling */
+
 
 /* Email styling */
 .email-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 25px 0;
 
     /* The space between "Email address" and the input field */
     height: 10.5vh;
@@ -105,7 +103,10 @@ input[type="email"], button {
 input[type="email"] {
     border: solid 1px var(--Grey);
 }
+/* End Email Styling */
 
+
+/* Button Styling */
 button {
     background-color: var(--DarkSlateGrey);
     color: var(--White);
@@ -117,6 +118,7 @@ button:hover {
     background: linear-gradient(to right, #ff0080, var(--Tomato));
     cursor: pointer;
 }
+/* End Button Styling */
 /* End Card Container styling */
 
 
@@ -137,6 +139,8 @@ button:hover {
     line-height: 1;
     margin: 4vh 0;
 }
+/* End Success Message styling */
+
 
 /* Error Message styling */
 .error-container {
@@ -152,6 +156,8 @@ button:hover {
 .error-msg:not(.hidden) {
     display: block;
 }
+/* End Error Message styling */
+
 
 /* Hidden class */
 .hidden {
@@ -169,21 +175,28 @@ button:hover {
 .attribution a {
     color: var(--White);
 }
+/* End Attribute styling */
 
+
+/* Media Queries */
 @media (max-width: 768px) {
     body {
         font-size: 0.8rem;
     }
 
-    .info-container {
-        padding-right: 40px;
+    .card-container {
+        margin: 0 20px;
     }
 
     .card-container img {
         width: 50%;
     }
 
-    .text-container {
+    .info-container {
+        padding-right: 40px;
+    }
+
+    .success-msg-container .text-container {
         margin-bottom: 8vh;
     }
 
@@ -199,6 +212,7 @@ button:hover {
         margin: 0;
         flex-direction: column;
         font-size: 1rem;
+        border-radius: 0;
     }
 
     .card-container img {
@@ -207,7 +221,7 @@ button:hover {
 
     .info-container {
         width: 100%;
-        padding: 2.2rem;
+        padding: 0 2.2rem;
     }
 
     .list-container ul li  {
@@ -223,19 +237,23 @@ button:hover {
         height: 12vh;
     }
 
-    .attribution {
-        padding: 12px;
+    .text-container {
+        padding: 4vh 0;
     }
 
     .success-msg-container {
         border-radius: 0;
+        padding: 4vh;
     }
 
-    .success-msg-container, .text-container {
+    .text-container, .success-msg-container {
         margin: 0;
-        padding: 4vh 2vh;
         width: 100%;
         height: 100%;
         justify-content: space-between;
+    }
+
+    .attribution {
+        margin: 20px 0;
     }
 }
